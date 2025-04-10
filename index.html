@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafetería Triple Peaks</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./vendor/normalize.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="header section">
+        <nav class="nav">
+          <img
+            src="./images/logo_coffeeshop_light.svg"
+            alt="Logotipo de la Cafetería Triple Peaks"
+            class="nav__logo"
+          />
+          <input type="checkbox" id="nav-toggle" class="nav__toggle" />
+          <label for="nav-toggle" class="nav__mobile-button">
+            <span class="nav__mobile-line"></span>
+            <span class="nav__mobile-line"></span>
+            <span class="nav__mobile-line"></span>
+          </label>
+          <ul class="nav__links">
+            <li>
+              <a href="#recipes" class="nav__link no-underline"
+                >Nuestras recetas</a
+              >
+            </li>
+            <li>
+              <a href="#reservation" class="nav__link no-underline">Reservar</a>
+            </li>
+            <li>
+              <a href="#footer" class="nav__link no-underline">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__content">
+          <div class="header__text">
+            <h1 class="header__title">
+              Bienvenidos a la Cafetería Triple Peaks
+            </h1>
+            <p class="header__description">
+              Donde cada taza cuenta una historia
+            </p>
+          </div>
+          <img
+            src="./images/inside_coffee_shop.png"
+            alt="Interior de la cafetería"
+            class="header__image"
+          />
+        </div>
+        <div class="header__hours-container">
+          <div class="header__hours">
+            <p class="header__hours-title">Horario:</p>
+            <p class="header__hours-weekdays">Lunes a viernes (7:00 - 21:00)</p>
+            <p class="header__hours-weekends">
+              Sábados y domingos (8:00 - 20:00)
+            </p>
+          </div>
+          <p class="header__address">2000, Success Avenue</p>
+        </div>
+      </header>
+
+      <!-- Sección Recetas -->
+      <section class="recipes section" id="recipes">
+        <div class="recipes__container">
+          <h2 class="recipes__title">Nuestras Recetas Destacadas</h2>
+          <p class="recipes__subtitle">
+            Echa un vistazo a las recetas que hemos reunido para que elabores
+            tus propios snacks
+          </p>
+
+          <div class="recipes__videos">
+            <div class="recipes__video-item">
+              <div class="recipes__video-wrapper">
+                <iframe
+                  class="recipes__iframe"
+                  src="https://www.youtube.com/embed/otN9A8udDkU"
+                  title="Receta de café dalgona"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="recipes__video-caption">
+                <p class="recipes__video-title">Café Dalgona</p>
+                <p class="recipes__video-duration">10 min</p>
+              </div>
+            </div>
+
+            <div class="recipes__video-item">
+              <div class="recipes__video-wrapper">
+                <iframe
+                  class="recipes__iframe"
+                  src="https://www.youtube.com/embed/qg3H6qFxWhY"
+                  title="Receta de pancakes"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="recipes__video-caption">
+                <p class="recipes__video-title">Pancakes Especiales</p>
+                <p class="recipes__video-duration">25 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Reservaciones -->
+      <section class="reservation section" id="reservation">
+        <div class="reservation__container">
+          <h2 class="reservation__title">Reserva una mesa</h2>
+          <form class="reservation__form">
+            <div class="reservation__form-group">
+              <input
+                type="text"
+                class="reservation__input"
+                placeholder="Nombre completo"
+                required
+              />
+            </div>
+            <div class="reservation__form-group">
+              <input
+                type="number"
+                class="reservation__input"
+                placeholder="Número de comensales"
+                min="1"
+                required
+              />
+            </div>
+            <div class="reservation__form-group">
+              <input type="date" class="reservation__input" required />
+            </div>
+            <div class="reservation__form-group">
+              <input type="time" class="reservation__input" required />
+            </div>
+            <div class="reservation__form-group">
+              <input
+                type="email"
+                class="reservation__input"
+                placeholder="Correo electrónico"
+                required
+              />
+            </div>
+            <button type="submit" class="reservation__button">
+              Reservar una mesa
+            </button>
+            <div class="reservation__checkbox">
+              <input
+                type="checkbox"
+                id="terms"
+                class="reservation__checkbox-input"
+                required
+              />
+              <label for="terms" class="reservation__checkbox-label">
+                <img
+                  src="./images/check.svg"
+                  alt="Check"
+                  class="reservation__checkbox-icon"
+                />
+                Acepto los términos y condiciones
+              </label>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer" id="footer">
+        <div class="footer__container">
+          <div class="footer__columns">
+            <div class="footer__column">
+              <img
+                src="./images/logo_coffeeshop_dark.svg"
+                alt="Logotipo Cafetería Triple Peaks"
+                class="footer__logo"
+              />
+              <p class="footer__copyright">© 2024 Cafetería Triple Peaks</p>
+            </div>
+
+            <div class="footer__column footer__column_content_hours">
+              <h3 class="footer__column-heading">Horario</h3>
+              <ul class="footer__list">
+                <li class="footer__list-item">Lunes a viernes: 7am - 9pm</li>
+                <li class="footer__list-item">Sábados y domingos: 8am - 8pm</li>
+              </ul>
+            </div>
+
+            <div class="footer__column footer__column_content_social">
+              <h3 class="footer__column-heading">Redes sociales</h3>
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__column-link">
+                    <img
+                      src="./images/facebook_white.svg"
+                      alt="Facebook"
+                      class="footer__social-icon"
+                    />
+                    Facebook
+                  </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__column-link">
+                    <img
+                      src="./images/instagram_white.svg"
+                      alt="Instagram"
+                      class="footer__social-icon"
+                    />
+                    Instagram
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
