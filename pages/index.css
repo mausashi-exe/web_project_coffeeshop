@@ -31,6 +31,12 @@ body {
   line-height: 20px;
 }
 
+/* Contenido Principal */
+main {
+  flex: 1;
+  width: 100%;
+}
+
 /* Clase general para secciones */
 .section {
   width: 100%;
@@ -96,7 +102,7 @@ body {
   flex: 1;
   align-items: center;
   justify-content: space-between;
-  padding: 120px 32px 32px;
+  padding: 150px 32px 32px;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -107,14 +113,16 @@ body {
 }
 
 .header__title {
-  font-size: 48px;
+  font-size: 60px;
   line-height: 1.2;
   margin-bottom: 24px;
   color: #0a2750;
 }
+
 .header__title-italic {
   font-family: "Noto Serif", "Times New Roman", serif;
   font-style: italic;
+  color: #2f80ed;
   font-weight: 400;
 }
 
@@ -148,7 +156,7 @@ body {
 .header__hours {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .header__hours-title,
@@ -179,23 +187,24 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: calc(100vh - 160px);
-  padding-left: 40px;
+  padding-left: 80px;
   box-sizing: border-box;
 }
 
 .recipes__title {
   font-size: 40px;
-  margin-bottom: 16px;
-  font-family: "Inter";
+  margin-bottom: 24px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   text-align: left;
 }
 
 .recipes__subtitle {
   font-size: 20px;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
   max-width: 800px;
   font-family: "Noto Serif", "Times New Roman", serif;
   text-align: left;
+  line-height: 1.4;
 }
 
 .recipes__videos {
@@ -258,11 +267,11 @@ body {
 
 .reservation__title {
   font-size: 32px;
-  color: white; /* Cambiado a blanco para mejor contraste */
+  color: rgb(0, 0, 0);
   margin-bottom: 32px;
   text-align: center;
-  font-family: "Noto Serif", "Times New Roman", serif;
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sutil sombra para legibilidad */
+  font-family: "inter", Arial, Helvetica, sans-serif;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .reservation__form {
@@ -271,15 +280,19 @@ body {
   gap: 24px;
 }
 
+.reservation__form-group {
+  width: 100%;
+}
+
 .reservation__input {
   width: 100%;
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   font-size: 16px;
   font-family: "Inter", Arial, sans-serif;
-  backdrop-filter: blur(2px); /* Efecto de vidrio esmerilado */
+  backdrop-filter: blur(2px);
 }
 
 .reservation__input:focus {
@@ -307,9 +320,64 @@ body {
   transform: translateY(-2px);
 }
 
+.reservation__checkbox-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.reservation__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reservation__checkbox-input {
+  position: absolute;
+  opacity: 0;
+}
+
 .reservation__checkbox-label {
-  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Inter", Arial, sans-serif;
+  color: rgb(0, 0, 0);
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reservation__checkbox-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 3px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.reservation__checkbox-input:checked
+  + .reservation__checkbox-label
+  .reservation__checkbox-custom {
+  background-color: #2f80ed;
+  border-color: #2f80ed;
+}
+
+.reservation__checkbox-input:checked
+  + .reservation__checkbox-label
+  .reservation__checkbox-custom::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 /* Footer */
@@ -326,7 +394,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 32px;
+  padding: 0 80px;
   box-sizing: border-box;
 }
 
@@ -346,6 +414,7 @@ body {
 
 .footer__column:last-child {
   text-align: right;
+  padding-right: 40px;
 }
 
 .footer__logo {

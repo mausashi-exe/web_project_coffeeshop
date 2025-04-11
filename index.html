@@ -71,112 +71,115 @@
             </p>
           </div>
           <p class="header__address">
-            Avenida del Exito 200, Ciudad Triple Peaks
+            Avenida del Éxito 200, Ciudad Triple Peaks
           </p>
         </div>
       </header>
 
-      <!-- Sección Recetas -->
-      <section class="recipes section" id="recipes">
-        <div class="recipes__container">
-          <h2 class="recipes__title">Recetas Destacadas</h2>
-          <p class="recipes__subtitle">
-            Echa un vistazo a las recetas que hemos reunido para que elabores
-            tus propios snacks,
-          </p>
+      <!-- Contenido Principal -->
+      <main>
+        <!-- Sección Recetas -->
+        <section class="recipes section" id="recipes">
+          <div class="recipes__container">
+            <h2 class="recipes__title">Recetas</h2>
+            <p class="recipes__subtitle">
+              Echa un vistazo a las recetas que hemos reunido para que elabores
+              tus propios snacks
+            </p>
 
-          <div class="recipes__videos">
-            <div class="recipes__video-item">
-              <div class="recipes__video-wrapper">
-                <iframe
-                  class="recipes__iframe"
-                  src="https://www.youtube.com/embed/otN9A8udDkU"
-                  title="Receta de café dalgona"
-                  allowfullscreen
-                ></iframe>
+            <div class="recipes__videos">
+              <div class="recipes__video-item">
+                <div class="recipes__video-wrapper">
+                  <iframe
+                    class="recipes__iframe"
+                    src="https://www.youtube.com/embed/otN9A8udDkU"
+                    title="Receta de café dalgona"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="recipes__video-caption">
+                  <p class="recipes__video-title">Receta en Aeropress</p>
+                  <p class="recipes__video-duration">~5 min</p>
+                </div>
               </div>
-              <div class="recipes__video-caption">
-                <p class="recipes__video-title">Receta en Aeropress</p>
-                <p class="recipes__video-duration">~5 min</p>
-              </div>
-            </div>
 
-            <div class="recipes__video-item">
-              <div class="recipes__video-wrapper">
-                <iframe
-                  class="recipes__iframe"
-                  src="https://www.youtube.com/embed/qg3H6qFxWhY"
-                  title="Receta de pancakes"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <div class="recipes__video-caption">
-                <p class="recipes__video-title">Receta en cafetera francesa</p>
-                <p class="recipes__video-duration">~15 min</p>
+              <div class="recipes__video-item">
+                <div class="recipes__video-wrapper">
+                  <iframe
+                    class="recipes__iframe"
+                    src="https://www.youtube.com/embed/qg3H6qFxWhY"
+                    title="Receta de pancakes"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="recipes__video-caption">
+                  <p class="recipes__video-title">
+                    Receta en cafetera francesa
+                  </p>
+                  <p class="recipes__video-duration">~15 min</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Sección Reservaciones -->
-      <section class="reservation section" id="reservation">
-        <div class="reservation__form-container">
-          <h2 class="reservation__title">Reserva una mesa</h2>
-          <form class="reservation__form">
-            <div class="reservation__form-group">
-              <input
-                type="text"
-                class="reservation__input"
-                placeholder="Nombre completo"
-                required
-              />
-            </div>
-            <div class="reservation__form-group">
-              <input
-                type="number"
-                class="reservation__input"
-                placeholder="Número de comensales"
-                min="1"
-                required
-              />
-            </div>
-            <div class="reservation__form-group">
-              <input type="date" class="reservation__input" required />
-            </div>
-            <div class="reservation__form-group">
-              <input type="time" class="reservation__input" required />
-            </div>
-            <div class="reservation__form-group">
-              <input
-                type="email"
-                class="reservation__input"
-                placeholder="Correo electrónico"
-                required
-              />
-            </div>
-            <button type="submit" class="reservation__button">
-              Reservar una mesa
-            </button>
-            <div class="reservation__checkbox">
-              <input
-                type="checkbox"
-                id="terms"
-                class="reservation__checkbox-input"
-                required
-              />
-              <label for="terms" class="reservation__checkbox-label">
-                <img
-                  src="./images/check.svg"
-                  alt="Check"
-                  class="reservation__checkbox-icon"
+        <!-- Sección Reservaciones -->
+        <section class="reservation section" id="reservation">
+          <div class="reservation__form-container">
+            <h2 class="reservation__title">Reserva una mesa</h2>
+            <form class="reservation__form">
+              <div class="reservation__form-group">
+                <input
+                  type="text"
+                  class="reservation__input"
+                  placeholder="Nombre completo"
+                  required
                 />
-                Acepto los términos y condiciones
-              </label>
-            </div>
-          </form>
-        </div>
-      </section>
+              </div>
+              <div class="reservation__form-group">
+                <input
+                  type="number"
+                  class="reservation__input"
+                  placeholder="Número de comensales"
+                  min="1"
+                  required
+                />
+              </div>
+              <div class="reservation__form-group">
+                <input type="date" class="reservation__input" required />
+              </div>
+              <div class="reservation__form-group">
+                <input type="time" class="reservation__input" required />
+              </div>
+              <div class="reservation__form-group">
+                <input
+                  type="email"
+                  class="reservation__input"
+                  placeholder="Correo electrónico"
+                  required
+                />
+              </div>
+              <button type="submit" class="reservation__button">
+                Reservar una mesa
+              </button>
+              <div class="reservation__checkbox-container">
+                <div class="reservation__checkbox">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    class="reservation__checkbox-input"
+                    required
+                  />
+                  <label for="terms" class="reservation__checkbox-label">
+                    <span class="reservation__checkbox-custom"></span>
+                    Acepto los términos y condiciones
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
 
       <!-- Footer -->
       <footer class="footer" id="footer">
