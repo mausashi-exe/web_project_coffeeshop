@@ -16,12 +16,17 @@ body {
   overflow-x: hidden;
   height: 100%;
   font-size: 16px;
+  min-width: 1100px; /* Asegura que el viewport nunca sea menor que el mínimo */
 }
 
 .page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-width: 1100px;
+  max-width: 1600px;
+  margin: 0 auto; /* Esto centrará el bloque en pantallas >1600px */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible hasta el máximo */
 }
 
 /* Clase general para secciones */
@@ -53,7 +58,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
 }
 
 .nav__logo {
@@ -136,7 +141,7 @@ body {
 
 .header__hours-container {
   width: 100%;
-  background-color: #fff;
+  background-color: transparent;
   padding: 16px 32px;
   display: flex;
   justify-content: space-between;
@@ -145,7 +150,8 @@ body {
 
 .header__hours {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .header__hours-title,
@@ -347,13 +353,16 @@ body {
 .footer__columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 32px;
+  box-sizing: border-box;
 }
 
 .footer__column {
-  flex: 1 1 200px;
+  flex: 0 1 200px;
   min-width: 200px;
+  text-align: center;
 }
 
 .footer__logo {
@@ -369,11 +378,14 @@ body {
 
 .footer__column-heading {
   font-size: 19px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 .footer__list {
   list-style: none;
+  padding: 0;
+  text-align: left;
 }
 
 .footer__list-item {
