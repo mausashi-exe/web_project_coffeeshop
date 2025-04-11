@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafetería Triple Peaks</title>
     <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
@@ -18,33 +24,27 @@
             alt="Logotipo de la Cafetería Triple Peaks"
             class="nav__logo"
           />
-          <input type="checkbox" id="nav-toggle" class="nav__toggle" />
-          <label for="nav-toggle" class="nav__mobile-button">
-            <span class="nav__mobile-line"></span>
-            <span class="nav__mobile-line"></span>
-            <span class="nav__mobile-line"></span>
-          </label>
           <ul class="nav__links">
             <li>
-              <a href="#recipes" class="nav__link no-underline"
-                >Nuestras recetas</a
-              >
+              <a href="#recipes" class="nav__link">Nuestras recetas</a>
             </li>
             <li>
-              <a href="#reservation" class="nav__link no-underline">Reservar</a>
+              <a href="#reservation" class="nav__link">Reservar</a>
             </li>
             <li>
-              <a href="#footer" class="nav__link no-underline">Contacto</a>
+              <a href="#footer" class="nav__link">Contacto</a>
             </li>
           </ul>
         </nav>
         <div class="header__content">
           <div class="header__text">
             <h1 class="header__title">
-              Bienvenidos a la Cafetería Triple Peaks
+              <span class="header__title-italic">Café de especialidad</span>
+              <span class="header__title-regular"> en Triple Peaks</span>
             </h1>
             <p class="header__description">
-              Donde cada taza cuenta una historia
+              Te damos la bienvenida a nuestra zona de estudio! Aquí tenemos
+              café para darte energía y motivar tu creatividad.
             </p>
           </div>
           <img
@@ -61,17 +61,19 @@
               Sábados y domingos (8:00 - 20:00)
             </p>
           </div>
-          <p class="header__address">2000, Success Avenue</p>
+          <p class="header__address">
+            Avenida del Exito 200, Ciudad Triple Peaks
+          </p>
         </div>
       </header>
 
       <!-- Sección Recetas -->
       <section class="recipes section" id="recipes">
         <div class="recipes__container">
-          <h2 class="recipes__title">Nuestras Recetas Destacadas</h2>
+          <h2 class="recipes__title">Recetas Destacadas</h2>
           <p class="recipes__subtitle">
             Echa un vistazo a las recetas que hemos reunido para que elabores
-            tus propios snacks
+            tus propios snacks,
           </p>
 
           <div class="recipes__videos">
@@ -85,8 +87,8 @@
                 ></iframe>
               </div>
               <div class="recipes__video-caption">
-                <p class="recipes__video-title">Café Dalgona</p>
-                <p class="recipes__video-duration">10 min</p>
+                <p class="recipes__video-title">Receta en Aeropress</p>
+                <p class="recipes__video-duration">~5 min</p>
               </div>
             </div>
 
@@ -100,8 +102,8 @@
                 ></iframe>
               </div>
               <div class="recipes__video-caption">
-                <p class="recipes__video-title">Pancakes Especiales</p>
-                <p class="recipes__video-duration">25 min</p>
+                <p class="recipes__video-title">Receta en cafetera francesa</p>
+                <p class="recipes__video-duration">~15 min</p>
               </div>
             </div>
           </div>
@@ -110,7 +112,7 @@
 
       <!-- Sección Reservaciones -->
       <section class="reservation section" id="reservation">
-        <div class="reservation__container">
+        <div class="reservation__form-container">
           <h2 class="reservation__title">Reserva una mesa</h2>
           <form class="reservation__form">
             <div class="reservation__form-group">
@@ -173,11 +175,11 @@
           <div class="footer__columns">
             <div class="footer__column">
               <img
-                src="./images/logo_coffeeshop_dark.svg"
+                src="./images/logo_coffeeshop_light.svg"
                 alt="Logotipo Cafetería Triple Peaks"
                 class="footer__logo"
               />
-              <p class="footer__copyright">© 2024 Cafetería Triple Peaks</p>
+              <p class="footer__copyright">© 2025 Mauricio Olvera Valenzuela</p>
             </div>
 
             <div class="footer__column footer__column_content_social">

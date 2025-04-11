@@ -10,13 +10,12 @@ html {
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
   color: #333;
   overflow-x: hidden;
   height: 100%;
-  font-size: 16px;
-  min-width: 1100px; /* Asegura que el viewport nunca sea menor que el mínimo */
 }
 
 .page {
@@ -25,8 +24,11 @@ body {
   flex-direction: column;
   min-width: 1100px;
   max-width: 1600px;
-  margin: 0 auto; /* Esto centrará el bloque en pantallas >1600px */
-  width: 100%; /* Asegura que ocupe todo el ancho disponible hasta el máximo */
+  margin: 0 auto;
+  width: 100%;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 /* Clase general para secciones */
@@ -55,37 +57,20 @@ body {
   padding: 16px 32px;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  max-width: 1600px;
+  min-width: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   background-color: transparent;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .nav__logo {
   height: 50px;
   width: auto;
-  z-index: 1001;
-}
-
-.nav__toggle {
-  display: none;
-}
-
-.nav__mobile-button {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.nav__mobile-line {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: #333;
 }
 
 .nav__links {
@@ -99,6 +84,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .nav__link:hover {
@@ -126,11 +112,22 @@ body {
   margin-bottom: 24px;
   color: #0a2750;
 }
+.header__title-italic {
+  font-family: "Noto Serif", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.header__title-regular {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+}
 
 .header__description {
   font-size: 20px;
   margin-bottom: 32px;
   color: #555;
+  font-family: "Noto Serif", "Times New Roman", serif;
 }
 
 .header__image {
@@ -151,14 +148,14 @@ body {
 .header__hours {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 2px;
 }
 
 .header__hours-title,
 .header__hours-weekdays,
 .header__hours-weekends,
 .header__address {
-  margin: 8px 0;
+  margin: 2px 0;
   font-size: 14px;
   color: #333;
 }
@@ -182,19 +179,23 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: calc(100vh - 160px);
+  padding-left: 40px;
+  box-sizing: border-box;
 }
 
 .recipes__title {
   font-size: 40px;
   margin-bottom: 16px;
+  font-family: "Inter";
+  text-align: left;
 }
 
 .recipes__subtitle {
   font-size: 20px;
   margin-bottom: 48px;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  font-family: "Noto Serif", "Times New Roman", serif;
+  text-align: left;
 }
 
 .recipes__videos {
@@ -263,6 +264,7 @@ body {
   color: #0a2750;
   margin-bottom: 32px;
   text-align: center;
+  font-family: "Noto Serif", "Times New Roman", serif;
 }
 
 .reservation__form {
@@ -281,6 +283,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .reservation__input:focus {
@@ -298,6 +301,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   margin-top: 16px;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .reservation__button:hover {
@@ -320,6 +324,7 @@ body {
   gap: 10px;
   cursor: pointer;
   font-size: 14px;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .reservation__checkbox-icon {
@@ -354,16 +359,20 @@ body {
 
 .footer__columns {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+  width: 100%;
 }
 
 .footer__column {
-  flex: 1;
-  min-width: 200px;
-  max-width: 45%;
+  flex: 0 0 auto;
+}
+
+.footer__column:first-child {
+  text-align: left;
+}
+
+.footer__column:last-child {
+  text-align: right;
 }
 
 .footer__logo {
@@ -375,18 +384,18 @@ body {
 .footer__copyright {
   font-size: 14px;
   margin-top: 32px;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .footer__column-heading {
   font-size: 19px;
   margin-bottom: 24px;
-  text-align: left;
+  font-family: "Noto Serif", "Times New Roman", serif;
 }
 
 .footer__list {
   list-style: none;
   padding: 0;
-  text-align: left;
 }
 
 .footer__list-item {
@@ -399,6 +408,8 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: flex-end;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 .footer__column-link:hover {
