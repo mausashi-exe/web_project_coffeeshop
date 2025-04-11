@@ -25,66 +25,68 @@
   </head>
   <body>
     <div class="page">
-      <!-- Header -->
-      <header class="header section">
-        <nav class="nav">
-          <img
-            src="./images/logo_coffeeshop_dark.svg"
-            alt="Logotipo de la Cafetería Triple Peaks"
-            class="nav__logo"
-          />
-          <ul class="nav__links">
-            <li>
-              <a href="#recipes" class="nav__link">Nuestras recetas</a>
-            </li>
-            <li>
-              <a href="#reservation" class="nav__link">Reservar</a>
-            </li>
-            <li>
-              <a href="#footer" class="nav__link">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__content">
-          <div class="header__text">
-            <h1 class="header__title">
-              <span class="header__title-italic">Café de especialidad</span>
-              <span class="header__title-regular"> en Triple Peaks</span>
-            </h1>
-            <p class="header__description">
-              Te damos la bienvenida a nuestra zona de estudio! Aquí tenemos
-              café para darte energía y motivar tu creatividad.
-            </p>
-          </div>
-          <img
-            src="./images/inside_coffee_shop.png"
-            alt="Interior de la cafetería"
-            class="header__image"
-          />
-        </div>
-        <div class="header__hours-container">
-          <div class="header__hours">
-            <p class="header__hours-title">Horario:</p>
-            <p class="header__hours-weekdays">Lunes a viernes (7:00 - 21:00)</p>
-            <p class="header__hours-weekends">
-              Sábados y domingos (8:00 - 20:00)
-            </p>
-          </div>
-          <p class="header__address">
-            Avenida del Éxito 200, Ciudad Triple Peaks
-          </p>
-        </div>
-      </header>
-
       <!-- Contenido Principal -->
-      <main>
+      <main class="content">
+        <!-- Header (ahora dentro de main) -->
+        <header class="header section">
+          <nav class="nav">
+            <img
+              src="./images/logo_coffeeshop_dark.svg"
+              alt="Logotipo de la Cafetería Triple Peaks"
+              class="nav__logo"
+            />
+            <ul class="nav__links">
+              <li>
+                <a href="#recipes" class="nav__link">Nuestras recetas</a>
+              </li>
+              <li>
+                <a href="#reservation" class="nav__link">Reservar</a>
+              </li>
+              <li>
+                <a href="#footer" class="nav__link">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__content">
+            <div class="header__text">
+              <h1 class="header__title">
+                <span class="header__title-italic">Café de especialidad</span>
+                <span class="header__title-regular"> en Triple Peaks</span>
+              </h1>
+              <p class="header__description">
+                Te damos la bienvenida a nuestra zona de estudio! Aquí tenemos
+                café para darte energía y motivar tu creatividad.
+              </p>
+            </div>
+            <img
+              src="./images/inside_coffee_shop.png"
+              alt="Interior de la cafetería"
+              class="header__image"
+            />
+          </div>
+          <div class="header__hours-container">
+            <div class="header__hours">
+              <p class="header__hours-title">Horario:</p>
+              <p class="header__hours-weekdays">
+                Lunes a viernes (7:00 - 21:00)
+              </p>
+              <p class="header__hours-weekends">
+                Sábados y domingos (8:00 - 20:00)
+              </p>
+            </div>
+            <p class="header__address">
+              Avenida del Exito 200, Ciudad Triple Peaks
+            </p>
+          </div>
+        </header>
+
         <!-- Sección Recetas -->
         <section class="recipes section" id="recipes">
           <div class="recipes__container">
-            <h2 class="recipes__title">Recetas</h2>
+            <h2 class="recipes__title">Recetas Destacadas</h2>
             <p class="recipes__subtitle">
               Echa un vistazo a las recetas que hemos reunido para que elabores
-              tus propios snacks
+              tus propios snacks,
             </p>
 
             <div class="recipes__videos">
@@ -162,19 +164,21 @@
               <button type="submit" class="reservation__button">
                 Reservar una mesa
               </button>
-              <div class="reservation__checkbox-container">
-                <div class="reservation__checkbox">
-                  <input
-                    type="checkbox"
-                    id="terms"
-                    class="reservation__checkbox-input"
-                    required
+              <div class="reservation__checkbox">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  class="reservation__checkbox-input"
+                  required
+                />
+                <label for="terms" class="reservation__checkbox-label">
+                  <img
+                    src="./images/check.svg"
+                    alt="Check"
+                    class="reservation__checkbox-icon"
                   />
-                  <label for="terms" class="reservation__checkbox-label">
-                    <span class="reservation__checkbox-custom"></span>
-                    Acepto los términos y condiciones
-                  </label>
-                </div>
+                  Acepto los términos y condiciones
+                </label>
               </div>
             </form>
           </div>
