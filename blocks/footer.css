@@ -1,3 +1,4 @@
+/* Pie de página */
 .footer {
   background-color: #0a2750;
   color: #ffffff;
@@ -52,7 +53,7 @@
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column; /* ✅ Apilarlos verticalmente */
+  flex-direction: column;
   gap: 16px;
 }
 
